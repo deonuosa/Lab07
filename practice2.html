@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style></style>
+</head>
+<body>
+    <h1>EECS 348 Lab Seven: Practice Two</h1>
+
+    <div>
+        <div id="m_paragraph">
+            Paragraph to be altered.
+        </div>
+
+        Border R(0-255): <input type="text" id="m_border_R" value=""> <br>
+        Border G(0-255): <input type="text" id="m_border_G" value=""> <br>
+        Border B(0-255): <input type="text" id="m_border_B" value=""> <br>
+        Border Width: <input type="text" id="m_border_width" value=""> <br>
+        Background R(0-255): <input type="text" id="m_bg_R" value=""> <br>
+        Background G(0-255): <input type="text" id="m_bg_G" value=""> <br>
+        Background B(0-255): <input type="text" id="m_bg_B" value=""> <br>
+        <button onclick="paragraph_color()">Change the color!</button> <br>
+    </div>
+
+    <script>
+        function paragraph_color() {
+            var border_R = document.getElementById("m_border_R").value;
+            var border_G = document.getElementById("m_border_G").value;
+            var border_B = document.getElementById("m_border_B").value;
+            var border_width = document.getElementById("m_border_width").value;
+            var bg_R = document.getElementById("m_bg_R").value;
+            var bg_G = document.getElementById("m_bg_G").value;
+            var bg_B = document.getElementById("m_bg_B").value;
+
+            var tag = document.getElementById("m_paragraph");
+            tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
+            tag.style.borderWidth = border_width + "px";
+            tag.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`;
+        }
+    </script>
+</body>
+</html>
