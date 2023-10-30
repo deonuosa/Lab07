@@ -7,15 +7,15 @@
 
 <body>
     <h1>EECS 348 Lab Seven: Practice Three</h1>
-    <p>First Password: <input type="password" id="pass1" value=""></p>
-    <p>Second Password: <input type="password" id="pass2" value=""></p>
+    <p>First Password: <input type="password" id="pass_1" value=""></p>
+    <p>Second Password: <input type="password" id="pass_2" value=""></p>
 
     <button onclick="validatePasswords()">Validate Your Passwords</button>
 
     <script type="text/javascript">
         function validatePasswords() {
-            var pass1 = document.getElementById("pass1").value;
-            var pass2 = document.getElementById("pass2").value;
+            var pass1 = document.getElementById("pass_1").value;
+            var pass2 = document.getElementById("pass_2").value;
 
             if (pass1.length < 8) {
                 alert("The length of the first password is less than 8 characters!");
